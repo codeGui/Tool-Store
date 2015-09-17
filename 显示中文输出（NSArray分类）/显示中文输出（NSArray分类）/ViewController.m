@@ -15,13 +15,19 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *array = @[@"老王", @"小张"];
+    
+    NSLog(@"%@",array);
+    
+    NSDictionary *dict = @{@"name" : @"张" , @"age" : @18};
+    
+    NSLog(@"%@",dict);
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

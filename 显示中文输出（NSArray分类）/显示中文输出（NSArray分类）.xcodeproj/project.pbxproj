@@ -13,6 +13,7 @@
 		60B500C61BAAC97E00C46FF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B500C41BAAC97E00C46FF9 /* Main.storyboard */; };
 		60B500C81BAAC97E00C46FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60B500C71BAAC97E00C46FF9 /* Assets.xcassets */; };
 		60B500CB1BAAC97E00C46FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B500C91BAAC97E00C46FF9 /* LaunchScreen.storyboard */; };
+		60B500D41BAACA2F00C46FF9 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B500D31BAACA2F00C46FF9 /* NSArray+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		60B500C71BAAC97E00C46FF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60B500CA1BAAC97E00C46FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60B500CC1BAAC97E00C46FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60B500D21BAACA2F00C46FF9 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		60B500D31BAACA2F00C46FF9 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				60B500BF1BAAC97E00C46FF9 /* AppDelegate.m */,
 				60B500C11BAAC97E00C46FF9 /* ViewController.h */,
 				60B500C21BAAC97E00C46FF9 /* ViewController.m */,
+				60B500D21BAACA2F00C46FF9 /* NSArray+Log.h */,
+				60B500D31BAACA2F00C46FF9 /* NSArray+Log.m */,
 				60B500C41BAAC97E00C46FF9 /* Main.storyboard */,
 				60B500C71BAAC97E00C46FF9 /* Assets.xcassets */,
 				60B500C91BAAC97E00C46FF9 /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60B500C31BAAC97E00C46FF9 /* ViewController.m in Sources */,
+				60B500D41BAACA2F00C46FF9 /* NSArray+Log.m in Sources */,
 				60B500C01BAAC97E00C46FF9 /* AppDelegate.m in Sources */,
 				60B500BD1BAAC97E00C46FF9 /* main.m in Sources */,
 			);
