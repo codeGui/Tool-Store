@@ -15,6 +15,9 @@
 		6000E3D61BB123C50014902B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6000E3D41BB123C50014902B /* LaunchScreen.storyboard */; };
 		6000E3E11BB123C50014902B /* DOM__XMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6000E3E01BB123C50014902B /* DOM__XMLTests.m */; };
 		6000E3EC1BB123C50014902B /* DOM__XMLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6000E3EB1BB123C50014902B /* DOM__XMLUITests.m */; };
+		6000E3FE1BB124510014902B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6000E3FD1BB124510014902B /* GDataXMLNode.m */; settings = {ASSET_TAGS = (); }; };
+		6000E4031BB135F30014902B /* video.m in Sources */ = {isa = PBXBuildFile; fileRef = 6000E4021BB135F30014902B /* video.m */; settings = {ASSET_TAGS = (); }; };
+		6000E4061BB135FC0014902B /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 6000E4051BB135FC0014902B /* NSArray+Log.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		6000E3E71BB123C50014902B /* DOM解析XMLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DOM解析XMLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6000E3EB1BB123C50014902B /* DOM__XMLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOM__XMLUITests.m; sourceTree = "<group>"; };
 		6000E3ED1BB123C50014902B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6000E3FC1BB124510014902B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		6000E3FD1BB124510014902B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		6000E4011BB135F30014902B /* video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video.h; sourceTree = "<group>"; };
+		6000E4021BB135F30014902B /* video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = video.m; sourceTree = "<group>"; };
+		6000E4041BB135FC0014902B /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Log.h"; path = "Log/NSArray+Log.h"; sourceTree = "<group>"; };
+		6000E4051BB135FC0014902B /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Log.m"; path = "Log/NSArray+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,11 @@
 		6000E3C51BB123C50014902B /* DOM解析XML */ = {
 			isa = PBXGroup;
 			children = (
+				6000E4011BB135F30014902B /* video.h */,
+				6000E4021BB135F30014902B /* video.m */,
+				6000E4041BB135FC0014902B /* NSArray+Log.h */,
+				6000E4051BB135FC0014902B /* NSArray+Log.m */,
+				6000E3FB1BB124400014902B /* GData */,
 				6000E3C91BB123C50014902B /* AppDelegate.h */,
 				6000E3CA1BB123C50014902B /* AppDelegate.m */,
 				6000E3CC1BB123C50014902B /* ViewController.h */,
@@ -138,6 +152,15 @@
 				6000E3ED1BB123C50014902B /* Info.plist */,
 			);
 			path = "DOM解析XMLUITests";
+			sourceTree = "<group>";
+		};
+		6000E3FB1BB124400014902B /* GData */ = {
+			isa = PBXGroup;
+			children = (
+				6000E3FC1BB124510014902B /* GDataXMLNode.h */,
+				6000E3FD1BB124510014902B /* GDataXMLNode.m */,
+			);
+			name = GData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6000E4031BB135F30014902B /* video.m in Sources */,
 				6000E3CE1BB123C50014902B /* ViewController.m in Sources */,
+				6000E3FE1BB124510014902B /* GDataXMLNode.m in Sources */,
+				6000E4061BB135FC0014902B /* NSArray+Log.m in Sources */,
 				6000E3CB1BB123C50014902B /* AppDelegate.m in Sources */,
 				6000E3C81BB123C50014902B /* main.m in Sources */,
 			);
@@ -413,8 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "DOM解析XML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.waterfoxjie.DOM--XML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -424,8 +452,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "DOM解析XML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.waterfoxjie.DOM--XML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
